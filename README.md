@@ -1,52 +1,82 @@
-# Welcome to your Expo app 👋
+# Sanctuary – Student Safety Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **Sanctuary**, a mobile app built with **React Native + Expo** to enhance student safety through secure authentication, user profiles, and seamless mobile access.
 
-## Get started
+---
 
-1. Install dependencies
+## Getting Started
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/krishabasrur123/sanctuary.git
+```
+```bash
+cd sanctuary
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependencies
+```bash
+npm install
+```
+### 3. Start the Development Server
+```bash
+npx expo start
+```
 
-## Learn more
+##### This will launch the Expo developer tools. You can open the app in:
 
-To learn more about developing your project with Expo, look at the following resources:
++ Expo Go (on your physical device)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
++ Android Emulator
 
-## Join the community
++ iOS Simulator (Mac only)
 
-Join our community of developers creating universal apps.
++ A development build (for native modules)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# sanctuary
-Student Safety Mobile App
+## Technologies Used
+- Expo – Cross-platform development framework
+
+- React Native
+
+- Supabase – Backend (Auth, DB, APIs)
+
+- NativeWind – Tailwind CSS for React Native
+
+- Expo Router – File-based navigation
+
+- dotenv – Manage environment variables
+
+## Environment Variables
+Create a .env file in the project root with the following:
+```bash
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+ENV_PUBLIC_GREETING="Welcome!"
+ENV_PUBLIC_VERSION="1.0.0"
+```
+* Note: .env is listed in .gitignore to keep your keys private.
+
+## Project Structure
+```
+sanctuary/
+├── app/                 # Expo Router screens (e.g., index.tsx, login_screen.tsx)
+├── components/          # Reusable UI components
+├── lib/                 # Supabase client (createClient.ts)
+├── constants/           # Global variables
+├── assets/              # Fonts and images
+├── app.config.js        # Dynamic Expo config with dotenv
+├── .env                 # Environment variables (gitignored)
+├── README.md
+
+```
+## Features
++ User signup & login (Supabase Auth)
+
++ Profile creation and storage (Supabase DB)
+
++ Secure session handling
+
++ Dark/light theme with NativeWind/Tailwind/Postcss
+
++ File-based navigation with Expo Router
